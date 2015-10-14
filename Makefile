@@ -1,5 +1,5 @@
 obj-m = hello.o
-K_VERSION = $(uname -r)
+K_VERSION=$(shell uname -r)
 
 all:
 	make -C /lib/modules/$(K_VERSION)/build M=$(PWD) modules
